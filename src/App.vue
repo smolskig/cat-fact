@@ -4,6 +4,7 @@
       <span >Click on the card to get a new random photo and fact</span>
     </div>
     <FactCard msg="Welcome to Your Vue.js App"/>
+    <div id="adsgoeshere" style="background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent"></div>
   </div>
 </template>
 
@@ -12,8 +13,16 @@ import FactCard from './components/FactCard.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      adsenseContent:''
+    }
+  },
   components: {
     FactCard
+  },
+  mounted:function(){
+    this.adsenseContent = document.getElementById('divadsensedisplaynone').innerHTML
   }
 }
 </script>
