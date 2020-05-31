@@ -5,7 +5,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    content:{},
     catImage:'',
     catFact:''
   },
@@ -17,29 +16,9 @@ export default new Vuex.Store({
     setCatFact(state,status){
       state.catFact = status
     },
-    setContent(state,status){
-      state.content = status
-    }
   },
 
   actions: {
-    requestCardContent({state, dispatch,commit}){
-      return new Promise((resolve,reject)=>{
-        dispatch('requestCatImage')
-          .then(()=>{
-            dispatch('requestCatFact')
-              .then(()=>{
-                resolve({image:state.catImage, fact:state.catFact})
-              })
-              .catch(err=>{
-                reject(console.log('error:', err))
-              })
-          }) 
-          .catch(err=>{
-            reject(console.log('error:', err))
-          })
-      })
-    },
     requestCatImage({commit}){
       return new Promise((resolve,reject)=>{
       axios.get(process.env.VUE_APP_GET_PHOTO)
@@ -60,12 +39,6 @@ export default new Vuex.Store({
         .catch(err=>reject(err))
       })
     }
-  },
-
-  getters:{
-    getContent: state => {
-      return {image:state.catImage, fact:state.catFact}
-     }
   },
   modules: {
   }
