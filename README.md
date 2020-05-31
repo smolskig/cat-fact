@@ -1,19 +1,14 @@
-# cat-facts
+### 🐱 Cat Facts 🐱
 
-## Project setup
-```
-npm install
-```
+#### A simple App that show random photos and facts about cats
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+#### 💻 How this app was made ? 💻
+The app was made in VueJs, using Vuex to manage states and make requisitions.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+#### 📣How do you get this informations ? 📣
+The informations (photos and facts) was gotten by two APIs :
+for Photos : https://api.thecatapi.com/v1/images 
+for Facts : https://catfact.ninja/fact 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+####  ⭐ Features ⭐
+⭐ The app is responsible, and compatible with PWA ⭐
