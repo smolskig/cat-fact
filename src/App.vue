@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="title">
+      <span >Click on the card to get a new random photo and fact</span>
+    </div>
+    <FactCard msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FactCard from './components/FactCard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FactCard
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+.title{
+  position:absolute;
+  top:10%;
+  left: 50%;
+  width:100%;
+  transform: translate(-50%, -50%);
+  color:#A9D9D9;
+  font-weight: bold;
+  font-size:35px;
+  font-family:'montserrat';
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+@media(max-width:700px){
+  .title{
+    font-size:20px;
+  }
 }
 </style>
