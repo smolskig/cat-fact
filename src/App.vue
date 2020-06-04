@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div class="title">
-      <span >Click on the card to get a new random photo and fact</span>
-    </div>
     <FactCard msg="Welcome to Your Vue.js App"/>
     <div id="adsgoeshere" style="position:absolute; bottom:0; background: #1d1f29; padding-top:60px; text-align: center;" v-html="adsenseContent"></div>
   </div>
